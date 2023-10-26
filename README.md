@@ -96,7 +96,7 @@ GROUP BY person_id
 HAVING visits >= 3)
 
 
-SELECT d.*, p.*,i.annual_income
+SELECT p.*,i.annual_income
 FROM drivers_license as d
 INNER JOIN person as p ON d.id = p.license_id
 INNER JOIN income as i ON p.ssn = i.ssn
